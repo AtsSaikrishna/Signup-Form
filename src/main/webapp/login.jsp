@@ -23,9 +23,9 @@
 						<form method="post" action="login" class="register-form"
 							id="login-form">
 							<div class="form-group">
-								<label for="username"></label> 
+								<label for="email"></label> 
 								<input
-									type="text" name="username" id="username"
+									type="text" name="email" id="username"
 									placeholder="Email" />
 							</div>
 							<div class="form-group">
@@ -49,8 +49,8 @@
 
 	<script type="text/javascript">
 	let status = document.getElementById("status").value;
-	if(status == "success"){
-		swal("Login Successfully", "success");
+	if(status == "failed"){
+		swal("Sorry", "Wrong Username or Password","failed");
 	}
 </script>
 </body>

@@ -29,8 +29,8 @@ public class LoginServlet extends HttpServlet {
 		RequestDispatcher dispatcher = null;
 		Connection con = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/signup","root", "MyDatabase");
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/signup?useSSL=false","root", "MyDatabase");
 			PreparedStatement pst = con
 				.prepareStatement("select * from users where email = ? and password = ?");
 			pst.setString(1, email);
